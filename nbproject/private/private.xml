@@ -5,8 +5,7 @@
         <group>
             <file>file:/C:/wamp64/www/blogsymfony/templates/pages/accueil.html.twig</file>
             <file>file:/C:/wamp64/www/blogsymfony/src/Controller/AccueilController.php</file>
-            <file>file:/C:/wamp64/www/blogsymfony/templates/base.html.twig</file>
-            <file>file:/C:/wamp64/www/blogsymfony/public/index.php</file>
+            <file>file:/C:/wamp64/www/blogsymfony/src/Entity/Rubrique.php</file>
         </group>
     </open-files>
 </project-private>

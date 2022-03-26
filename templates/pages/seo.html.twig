@@ -1,5 +1,9 @@
 {% extends 'base_pages.html.twig' %}
 
 {% block body %}
-    <h2>Hello world, SEO</h2>
+    <h2 class="text-center">    
+        {% for rubrique in rubriques %}
+            {{ rubrique.nom }}
+        {% endfor %}
+    </h2>
 {% endblock %}

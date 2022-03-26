@@ -1,5 +1,32 @@
 {% extends 'base_pages.html.twig' %}
 
 {% block body %}
-    <h2>Hello world, site / blog</h2>
+    <h2 class="text-center" style="color:#262626">    
+        <i class="fas fa-caret-right" style="color:#DA2525;"></i> Site web vitrine | Blog
+    </h2>
+    
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top:70px;margin-left:4%;">
+            {% for artsite in artsite %}
+            <div class="col" style="width:460px;">
+              <div class="card h-100" style="margin-left:3%;border:solid 2px #262626;">
+                <div class="card-body">
+                    <a href="{{ path('site.showone', {id:artsite.id}) }}" style="color:#262626;">
+                        <h5 class="card-title">
+                            <i class="fas fa-caret-right" style="color:#DA2525"></i> {{ artsite.titre }}
+                        </h5>
+                        <p class="card-text">
+                          {{ artsite.description }}
+                        </p>
+                    </a>
+                </div>
+                          <a style="color:#DA2525;text-align:right;margin-right:40px;">{{ artsite.auteur }}</a><br>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <br><br><br>
+            
+                
+                    
 {% endblock %}

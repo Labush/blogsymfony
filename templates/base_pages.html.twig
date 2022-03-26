@@ -18,7 +18,7 @@
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
-    <body>
+    <body style="overflow-x:hidden;">
         <!--- NAVBAR --->
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
@@ -53,10 +53,10 @@
           <br>
           <a href="{{ path('accueil') }}" style="margin-left:1%;">
             <button class="btn btn-light">
-                <i class="fas fa-caret-right" style="color:#DA2525"></i> Accueil
+                <i class="fas fa-home" style="color:#DA2525;margin-right:10px;"></i> Accueil
             </button>
           </a>
-        <br><br><br><br>
+            <br><br><br>
         {% block body %}{% endblock %}
     </body>
 </html>
