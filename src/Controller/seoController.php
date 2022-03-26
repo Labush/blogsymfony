@@ -12,13 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  *
  * @author Fdata
  */
-class AccueilController extends AbstractController {
+class seoController extends AbstractController {
     /**
-     * @Route("/", name="accueil")
+     * @Route("/seo", name="seo")
      * @return Response
      */
     public function index(): Response {
-        return $this->render("pages/accueil.html.twig");
+        return $this->render("pages/seo.html.twig");
         
     }
 }

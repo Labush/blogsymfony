@@ -12,13 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  *
  * @author Fdata
  */
-class AccueilController extends AbstractController {
+class ReseauxsociauxController extends AbstractController {
     /**
-     * @Route("/", name="accueil")
+     * @Route("/reseauxsociaux", name="reseauxsociaux")
      * @return Response
      */
     public function index(): Response {
-        return $this->render("pages/accueil.html.twig");
+        return $this->render("pages/reseauxsociaux.html.twig");
         
     }
 }

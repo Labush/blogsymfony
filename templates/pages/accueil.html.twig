@@ -1,5 +1,79 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1 style="text-align:center;letter-spacing:1.1px;">Le blog des coachs sportifs</h1>
+    <h1 style="text-align:center;letter-spacing:1.1px;">Le blog des coachs sportifs 2.0 <i class="fas fa-level-down-alt" style="color:#DA2525"></i></h1>
+    
+    <br><br>
+    <p style="margin-left:9%;margin-right:8%;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam nisi in ultrices congue. Morbi congue laoreet dolor non semper. Nulla vulputate dui aliquet, vestibulum nisi hendrerit, auctor turpis. Duis imperdiet turpis condimentum, tempus felis euismod, aliquet eros. Proin in feugiat ex, quis blandit augue. Suspendisse tincidunt, velit sed placerat dignissim, justo ante placerat lorem, id euismod lacus dui et libero. Vestibulum pretium convallis metus, id mollis nibh tincidunt vel. Quisque cursus porta turpis nec tincidunt. Sed ac libero id risus pretium vulputate. Nulla sit amet tristique ex. Proin egestas, libero eu fermentum congue, lectus nibh posuere odio, at aliquet ante est vitae magna. Nullam non risus non ex ultrices hendrerit. Maecenas velit enim, lacinia nec ligula ac, consequat facilisis est. Cras varius, nibh vitae consectetur cursus, ante risus pulvinar nunc, non dictum.
+    </p>
+    
+    <style>
+        .card{width:400px !important;}
+        .card-title{text-align:center;}
+        body{overflow-x:hidden;}
+    </style>
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top:70px;margin-left:12%;">
+        <div class="col">
+          <div class="card h-100">
+              <a href="{{ path('site') }}">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Site web vitrine | Blog"/>
+              </a>
+            <div class="card-body">
+                <a href=""{{ path('site') }} style="color:#262626;">
+                    <h5 class="card-title"><i class="fas fa-caret-right" style="color:#DA2525"></i> Site web vitrine | Blog</h5>
+                    <p class="card-text">
+                      Lorem Ipsum.
+                    </p>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-left:20%;">
+          <div class="card h-100">
+            <a href="{{ path('ecommerce') }}">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="E-commerce : boutique, pdf & vidéo"/>
+            </a>
+            <div class="card-body">
+                <a href="{{ path('ecommerce') }}" style="color:#262626;">
+                    <h5 class="card-title"><i class="fas fa-caret-right" style="color:#DA2525"></i> E-commerce : boutique, pdf & vidéo</h5>
+                    <p class="card-text">Lorem Ipsum</p>
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top:70px;margin-left:12%;">
+        <div class="col">
+          <div class="card h-100">
+              <a href="{{ path('seo') }}">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Référencement naturel"/>
+              </a>
+            <div class="card-body">
+                <a href="{{ path('seo') }}" style="color:#262626;">
+                    <h5 class="card-title"><i class="fas fa-caret-right" style="color:#DA2525"></i> Référencement naturel</h5>
+                    <p class="card-text">
+                      Lorem Ipsum.
+                    </p>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-left:20%;">
+          <div class="card h-100">
+              <a href="{{ path('reseauxsociaux') }}">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Réseaux sociaux"/>
+              </a>
+            <div class="card-body">
+                <a href="{{ path('reseauxsociaux') }}" style="color:#262626;">
+                    <h5 class="card-title"><i class="fas fa-caret-right" style="color:#DA2525"></i> Réseaux sociaux</h5>
+                    <p class="card-text">Lorem Ipsum</p>
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <br><br><br><br>
 {% endblock %}
