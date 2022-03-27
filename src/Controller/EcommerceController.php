@@ -6,7 +6,8 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Repository\RubriqueRepository;
+use App\Repository\ArtecommerceRepository;
+
 
 /**
  * Description of AccueilController
@@ -16,16 +17,28 @@ use App\Repository\RubriqueRepository;
 class EcommerceController extends AbstractController {
     /**
      * 
-     * @var RubriqueRepository
+     * @var ArtecommerceRepository
      */
     private $repository;
     
     /**
      * 
-     * @param RubriqueRepository $repository
+     * @param ArtecommerceRepository $repository
      */
-    function __construct(RubriqueRepository $repository) {
+    function __construct(ArtecommerceRepository $repository) {
         $this->repository = $repository;
+    }
+    
+     /**
+     * @Route("/ecommerce/ecommerceu/{id}", name="ecommerce.showone")
+     * @param type $id
+     * @return Response
+     */
+    public function showOne($id): Response{
+        $artecommerce = $this->repository->find($id);
+        return $this->render("pages/ecommerceu.html.twig", [
+            'artecommerce' => $artecommerce
+        ]);        
     }
     
     /**
@@ -33,11 +46,10 @@ class EcommerceController extends AbstractController {
      * @return Response
      */
     public function index(): Response {
-        $rubriques = $this->repository->findBy(['id' => '2']);
+        $artecommerce = $this->repository->findAll();
         return $this->render("pages/ecommerce.html.twig", [
-            'rubriques' => $rubriques
+            'artecommerce' => $artecommerce
         ]);
-        
     }
     
 }

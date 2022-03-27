@@ -2,9 +2,15 @@
 
 
 {% block body %}
-    <h2>{{ artsite.titre }}</h2>
+    <br>
+    <h2 class="text-center" style="color:#262626;">
+        <i class="fas fa-caret-right" style="color:#DA2525"></i> {{ artsite.titre }}
+    </h2>
+    <h5 class="text-center" style="color:#DA2525;font-style:italic;font-size: 17px;">publié par {{ artsite.auteur }}</h5>
     
-    <p>{{ artsite.contenu }}</p>
+    <p style="margin-top:100px;margin-left:10%;margin-right:10%;">
+        {{ artsite.contenu }}
+    </p>
     
     
     

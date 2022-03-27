@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/blogsymfony/templates/pages/accueil.html.twig</file>
-            <file>file:/C:/wamp64/www/blogsymfony/src/Controller/AccueilController.php</file>
-            <file>file:/C:/wamp64/www/blogsymfony/src/Entity/Rubrique.php</file>
+            <file>file:/C:/wamp64/www/blogsymfony/src/Controller/EcommerceController.php</file>
+            <file>file:/C:/wamp64/www/blogsymfony/src/Controller/ReseauxsociauxController.php</file>
         </group>
     </open-files>
 </project-private>

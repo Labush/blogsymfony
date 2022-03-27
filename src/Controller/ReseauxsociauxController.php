@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 
-use App\Repository\RubriqueRepository;
+use App\Repository\ArtreseauxsociauxRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,28 +16,39 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ReseauxsociauxController extends AbstractController {
     /**
      * 
-     * @var RubriqueRepository
+     * @var ArtreseauxsociauxRepository
      */
     private $repository;
     
     /**
      * 
-     * @param RubriqueRepository $repository
+     * @param ArtreseauxsociauxRepository $repository
      */
-    function __construct(RubriqueRepository $repository) {
+    function __construct(ArtreseauxsociauxRepository $repository) {
         $this->repository = $repository;
     }
     
+    
+     /**
+     * @Route("/reseauxsociaux/reseauxsociauxu/{id}", name="reseauxsociaux.showone")
+     * @param type $id
+     * @return Response
+     */
+    public function showOne($id): Response{
+        $artreseauxsociaux = $this->repository->find($id);
+        return $this->render("pages/reseauxsociauxu.html.twig", [
+            'artreseauxsociaux' => $artreseauxsociaux
+        ]);        
+    }
     
     /**
      * @Route("/reseauxsociaux", name="reseauxsociaux")
      * @return Response
      */
     public function index(): Response {
-        $rubriques = $this->repository->findBy(['id' => '4']);
+        $artreseauxsociaux = $this->repository->findAll();
         return $this->render("pages/reseauxsociaux.html.twig", [
-            'rubriques' => $rubriques
+            'artreseauxsociaux' => $artreseauxsociaux
         ]);
-        
     }
 }

@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 
-use App\Repository\RubriqueRepository;
+use App\Repository\ArtseoRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,16 +17,29 @@ class seoController extends AbstractController {
     
      /**
      * 
-     * @var RubriqueRepository
+     * @var ArtseoRepository
      */
     private $repository;
     
     /**
      * 
-     * @param RubriqueRepository $repository
+     * @param ArtseoRepository $repository
      */
-    function __construct(RubriqueRepository $repository) {
+    function __construct(ArtseoRepository $repository) {
         $this->repository = $repository;
+    }
+    
+    
+     /**
+     * @Route("/seo/seou/{id}", name="seo.showone")
+     * @param type $id
+     * @return Response
+     */
+    public function showOne($id): Response{
+        $artseo = $this->repository->find($id);
+        return $this->render("pages/seou.html.twig", [
+            'artseo' => $artseo
+        ]);        
     }
     
     /**
@@ -34,10 +47,9 @@ class seoController extends AbstractController {
      * @return Response
      */
     public function index(): Response {
-        $rubriques = $this->repository->findBy(['id' => '3']);
+        $artseo = $this->repository->findAll();
         return $this->render("pages/seo.html.twig", [
-            'rubriques' => $rubriques
+            'artseo' => $artseo
         ]);
-        
     }
 }
