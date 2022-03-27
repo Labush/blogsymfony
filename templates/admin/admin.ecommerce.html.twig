@@ -1,0 +1,68 @@
+{% extends "base_admin.html.twig" %}
+
+{% block body %}
+    <br>
+    <p class="text-center">
+        <a href="{{ path('admin.ecommerce.ajout') }}" class="btn btn-danger">
+            Ajouter un article
+        </a>
+    </p>
+    <br>
+        
+    <table class="table table-striped">                      
+        <thead>
+            <tr>
+                <th>
+                    Titre
+                </th>
+                <th>
+                    Description
+                </th>
+                <!--<th>
+                    Contenu
+                </th>-->
+                <th>
+                    Auteur
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artecommerce in artecommerce %}
+                <tr>
+                    <td>
+                        <a href="{{ path('ecommerce.showone', {id:artecommerce.id}) }}">
+                            <h5 class="text-danger">
+                                {{ artecommerce.titre }}
+                            </h5>
+                        </a>
+                    </td>
+                    <td>
+                        {{ artecommerce.description }}
+                    </td>
+                    <!--<td>
+                        {{ artecommerce.contenu }}
+                    </td>-->
+                    <td>
+                        {{ artecommerce.auteur }}
+                    </td>
+                    <td>
+                        <a href="{{ path('admin.ecommerce.edit', {id:artecommerce.id}) }}"
+                           class="btn btn-light">
+                            Editer
+                        </a>
+                        <br><br>
+                        <a href="{{ path('admin.ecommerce.suppr', {id:artecommerce.id}) }}"
+                           class="btn btn-danger"
+                           onclick="return confirm('Confirmez la suppression de l\'article : {{ artecommerce.titre }}')">
+                            Supprimer
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

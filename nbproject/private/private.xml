@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp64/www/blogsymfony/src/Controller/EcommerceController.php</file>
-            <file>file:/C:/wamp64/www/blogsymfony/src/Controller/ReseauxsociauxController.php</file>
+            <file>file:/C:/wamp64/www/blogsymfony/src/Controller/admin/AdminEcommerceController.php</file>
+            <file>file:/C:/wamp64/www/blogsymfony/templates/pages/ecommerce.html.twig</file>
+            <file>file:/C:/wamp64/www/blogsymfony/templates/admin/admin.ecommerce.html.twig</file>
         </group>
     </open-files>
 </project-private>

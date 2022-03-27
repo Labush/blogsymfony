@@ -1,0 +1,44 @@
+{% extends "base_admin.html.twig" %}
+
+{% block body %}
+    <style>
+        h3{text-align:right;margin-left:75px;margin-right:150px;padding:15px;}
+    </style>
+    
+    <br>
+    <a href="{{ path('admin.ecommerce') }}" style="margin-left:20px;">
+        <button class="btn btn-light"><i class="fas fa-long-arrow-alt-left" style="color:#DA2525;"></i></button>
+    </a>
+    
+    <br><br>
+    <h2 class="text-center">
+        <i class="fas fa-caret-right" style="color:#DA2525"></i> Editer un article<span style="color:#DA2525;">.</span>
+    </h2>
+    
+    <br><br>
+    
+    {{ form_start(formecommerce) }}
+    
+    <h3>
+        {{ form_row(formecommerce.titre) }}
+    </h3>
+    
+    <h3>
+        {{ form_row(formecommerce.description) }}
+    </h3>
+    
+    <h3>
+        {{ form_row(formecommerce.contenu) }}
+    </h3>
+    
+    <h3>
+        {{ form_row(formecommerce.auteur) }}
+    </h3>
+    
+    <h3 class="text-center">
+        {{ form_row(formecommerce.submit) }}
+    </h3>
+    
+    {{ form_end(formecommerce) }}
+    
+{% endblock %}
